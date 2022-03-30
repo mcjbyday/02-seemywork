@@ -32,7 +32,8 @@
 
 /* set document fonts throughout */
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Helvetica, 'Arial Narrow Bold', sans-serif;
+    font-family: Proxima Nova,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Helvetica, 'Arial Narrow Bold', sans-serif; */
 }
 
 /* properties applicable to all items*/
@@ -270,8 +271,8 @@ body {
     color: var(--textcolor1);
     font-size: 22pt;
     border: 1px solid white;
-    border-radius: 5px;
-    padding: 1%;
+    border-radius: 12px;
+    padding: 2%;
     z-index: 100;
 }
 
@@ -316,12 +317,12 @@ a {
         width: 98vw;
     }
     .hero_example {
-        min-width: 95vw;
-        min-height: 95vw;
+        min-width: 90vw;
+        min-height: 90vw;
     }
     .tile_link, .tile_example {
-        min-width: 75vw;
-        min-height: 75vw;
+        min-width: 70vw;
+        min-height: 70vw;
     }
 
     #top_container, #CTA_container {
@@ -344,5 +345,9 @@ a {
 @media screen and (max-width: 768px) {
     .header_nav, .nav_links {
         display: none;
+    }
+    .tile_label {
+        font-size: 12pt;
+        padding: 3%;
     }
 }
