@@ -1,19 +1,42 @@
+/* declare global variables */
 :root {
-    /* declare a variable with `--` syntax */
+    --darkest: rgb(3, 42, 82, 1);
+    --flatText: rgb(121, 169, 217, 1);
+    --lightest: rgb(8, 109, 209, 1);
+    --grayTone: rgb(109, 111, 112, 1);
+    --offDark: rgb(6, 81, 158, 1);
+    --textcolor1: rgb(255, 255, 255, 1);
+
     --mainbackg: rgb(100, 100, 100);
-    --backg: linear-gradient(
-        rgba(78, 83, 180, 0.3) 0%,
-        rgba(104, 102, 236, 0.6) 100%
+    --backg1: linear-gradient(
+        rgb(121, 169, 217, 0.4) 25%,
+        rgb(3, 42, 82,  0.6) 85%
     );
-    --textcolor: rgb(255, 255, 255);
+    /* global sizing */
+    --container-w-mins: 80vw;
+    --container-h-mins: 80vw;
+    --tile-w-mins: 40vw;
+    --tile-h-mins: 40vw;
+    --hero-w-mins: 60vw;
+    --hero-h-mins: 60vw;  
   }
 
+  /* TO DO remove
+  :root {
+      --tile-w-mins: 240px;
+    --tile-h-mins: 240px;
+    --hero-w-mins: 480px;
+    --hero-h-mins: 480px;
+  } */
+
+
+  /* set document fonts throughout */
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Helvetica, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
-    background-color: var(--mainbackg);
+    background-color: var(--darkest);
     display: flex;
     flex-flow: column nowrap;
     /* align-items: center; */
@@ -35,8 +58,8 @@ body {
 
 .header_name {
     font-weight: bolder;
-    font-size: 20pt;
-    color: var(--textcolor);
+    font-size: 22pt;
+    color: var(--textcolor1);
     /* align-content: center; */
     min-width: 250px;
     display: inline-block;
@@ -59,32 +82,28 @@ body {
 
 .nav_items {
     align-items: center;
-    color: var(--textcolor);
+    color: var(--textcolor1);
 }
 
 .nav_items:hover {
-    box-shadow: inset 0px 0px 8px 
-    rgba(200, 200, 200, 1), 
-    0px 0px 15px 
-    rgba(200, 200, 200, 1) ;
+    box-shadow: inset 0px 0px 8px var(--lightest), 
+    0px 0px 15px var(--lightest) ;
     cursor: URL("./images/pngs/cursor.png");
+    border-radius: 10px;
 }
 
 .banner_section {
     min-height: 125px;
     width: 100%;
-    /* background: (105deg, rgba(255,255,255,.2) 39%, 
-    rgba(51,56,57,1) 86%) center center / 400px 200px no-repeat, 
-    URL("./images/figures/banner.png") center no-repeat,
-     green; */
-    /* background-image: URL("./images/figures/banner.png"); */
-    background-size: 30em 100%;
+    background-image: var(--backg1), URL(./images/figures/Capture-cascades.gif);
+    background-size: 15em 100%;
     background-repeat: repeat-x;
-    background-color: green;
+    /* background-size: contain;
+    object-fit: contain; */
+    /* background-color: green; */
+    z-index: 1;
     position: relative;
-    display: box;
-    z-index: inherit;
-    
+    z-index: 1;
 }
 
 .banner_label {
@@ -92,11 +111,14 @@ body {
     z-index: 100;
     right: 15px;
     bottom: 15px;
-    background-color: rgb(11, 97, 11);
-    font-size: 16px;
-    color: var(--textcolor);
+    background-color: var(--darkest);
+    border-radius: 5px;
+    font-size: 16pt;
+    color: var(--textcolor1);
     padding: 1%;
     margin: 2px;
+    box-shadow: inset 0px 0px 8px var(--lightest), 
+    0px 0px 15px var(--lightest) ;
 }
 
 .main_container {
@@ -104,120 +126,240 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    min-width: 900px;
+    min-width: var(--container-w-mins);
     width: 100%;
     height: 100%
-    /* TO DO can remove when done testing */;
-    border: 2px solid blue;
-    padding: 1%;
 }
-
 
 .content_containers {
     width: 100%;
-    min-height: 30%;
-    min-width: 480px;
-    display: flex;
-    border: 1px dashed pink;
     padding: 1%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.content_containers:hover, .section_name:hover {
-    box-shadow: inset 0px 0px 8px 
-    rgb(27, 68, 29), 
-    0 0 15px rgba(27, 68, 29, 1)
+#top_container, #CTA_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .section_name {
-    min-width: 150px;
-    min-height: 150px;
+    display: flex;
+    color: var(--textcolor1);
+    font-weight: bolder;
+    font-size: 36pt;
+    align-self: center;
+    align-content: center;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    width: 60%;
+    padding: 3% 10%;
 }
 
+.section_article, .article_copy {
+    display: inline-block;
+    flex-direction: column;
+    align-content: flex-start;
+    color: var(--textcolor1);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    padding: 1%;
+    width: 100%;
+}
 
 #card_container {
-    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_example {
+    min-width: var(--hero-w-mins);
+    aspect-ratio: 1 / 1;
+    /* min-height: var(--hero-h-mins); */
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    /* apply transform to items */
+    /* transform: rotate(1deg); */
+    border: 1px solid var(--grayTone);
+    border-radius: 20px;
+    box-shadow: 7px 7px 5px var(--grayTone);
+}
+
+.tile_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 1px dashed blue; */
+}
+
+.tile_link, .tile_example {
+    display: flex;
+    min-width: var(--tile-w-mins);
+    min-height: var(--tile-h-mins);
+    aspect-ratio: 1 / 1;
+    padding: 3%;
+}
+
+.tile_example {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    width: 40%;
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    /* apply transform to items */
+    /* transform: rotate(1.5deg); */
+    border: 2px solid var(--grayTone);
+    border-radius: 20px;
+    -webkit-border-radius: 25px;
+    box-shadow: 7px 7px 5px var(--grayTone);
 }
 
 
-/* TO DO can remove when done testing */
-.main_container section {
-    border: 1px dotted orange;
+#etch {
+    background-image: URL(./images/figures/etch.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
 }
 
-.section_article {
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-content: flex-end;
+#refactor {
+    background-image: URL(./images/figures/Screenshot-Horiseon-Social-Solution-Services-Home.png);
+}
+
+#cascades {
+    background-image: URL(./images/figures/Screenshot-cascades.png);
+}
+
+#cardio {
+    background-image: URL(./images/figures/Screenshot-cardioex.gif);
+}
+
+#micra {
+    background-image: URL(./images/figures/Screenshot-productinsitu.jpg);   
+}
+
+#top-derm {
+    background-image: URL(./images/figures/Screenshot-top-derm.png);
+}
+
+#covid-19 {
+    background-image: URL(./images/figures/Screenshot-covid19.png);
+}
+
+.hero_example:hover, .tile_example:hover, .tile_label:hover {
+    box-shadow: none;
+    border: 1px solid #323131;
+    /* box-shadow: inset 0px 0px 8px 
+    rgb(27, 68, 29), 
+    0 0 15px rgba(27, 68, 29, 1) */
+}
+ 
+.tile_label {
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-color: var(--mainbackg);
+    color: var(--textcolor1);
+    font-size: 22pt;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1%;
+    z-index: 100;
+    /* TO DO might remove but snippet may be useful effect */
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .footer {
-    color: var(--textcolor);
+    color: var(--textcolor1);
     font-size: 12pt;
     font-weight: bold;
     align-self: center;
     padding: 1%;
 }
 
+
+.githubicon {
+    height: 1em;
+    content: URL("./icons/GitHub-Mark-64px.png");
+    object-fit: contain;
+    border-radius: 15px;
+    /* border: 1px solid --textcolor1; */
+    /* color: white; */
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.githubicon:hover, .githubicon:active {
+    box-shadow: inset 0px 0px 8px 
+    rgb(105, 172, 234, 0.8), 
+    0 0 15px rgb(35, 136, 230, 1);
+}
+
+
+/* properties for links*/
+a {
+    font-size: inherit;
+    outline: none;
+    color: var(--lightest);
+    /* removes underlining of links */
+    text-decoration: none;
+  }
+  
+/* a.link-attributes:link { 
+    color: #E5E7EB;
+}
+
+a.link-attributes​:hover {
+    color: green; 
+}
+
+a.link-attributes​:active { 
+    color: blue; 
+} */
+
+
+/* media tags help content display favorably in tablet and mobile browser viewports */
 @media screen and (max-width: 992px) {
-    
+    .main_container {
+        width: 98vw;
+    }
+    .hero_example {
+        min-width: 95vw;
+        min-height: 95vw;
+    }
+    .tile_link, .tile_example {
+        min-width: 75vw;
+        min-height: 75vw;
+    }
+
+    #top_container, #CTA_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section_article, .article_copy {
+        font-size: 12pt;
+        line-height: 1.7;
+    }
+    .section_name{
+        font-size: 22pt;
+        justify-content: center;
+        justify-self: center;
+        align-content: center;
+        align-self: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    
+    .header_nav, .nav_links {
+        display: none;
+    }
 }
-
-/* Snippets */
-/* Snippets */
-/* Snippets */
-/* Snippets */
-
-/* .page_header {
-    color: var(--textcolor);
-    font-size: 24pt;
-    text-align: center;
-  } */
-
-/* .header_subsection {
-    color: white;
-    text-align: center;
-} */
-
-
-/* 
-.main_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-
-} */
-/* 
-.card_label {
-    background-color: var(--mainbackg);
-    color: var(--textcolor);
-    font-size: 18pt;
-    font-weight: bold;
-    border: 1px solid white;
-    border-radius: 8px;
-    z-index: 100;
-    position: relative;
-    margin-top: -30px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease-in-out;
-} */
-/* 
-.card_top {
-    align-items: center;
-    color: white;
-}
-*/
-/*
-.card_contents {
-    background-image: var(--backg);
-    z-index: 1;
-    border-radius: 8px;
-    height:fit-content;
-} */

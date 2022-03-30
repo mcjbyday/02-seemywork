@@ -5,44 +5,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <!-- header content structure -->
     <header class="header_container">
-        <section class="header_name">Dr. Lorem E Ipsum, M.A.</section>
+        <section class="header_name">Michael Jacobs</section>
+        <!-- semantic tag nav combined with unordered list  -->
         <nav class="header_nav">
             <ul class="nav_links">
                 <li><a class="nav_items" href="#top_container">About</a></li>
                 <li><a class="nav_items" href="#card_container">Work</a></li>
                 <li><a class="nav_items" href="#CTA_container">Contact</a></li>
-                <li><a class="nav_items" href="">Resume</a></li>
+                <!-- <li><a class="nav_items" href="">Resume</a></li> -->
             </ul>
         </nav>
+        <!-- banner structure and content  -->
     </header>
     <figure class="banner_section">
-        <figcaption class="banner_label">"Bring joy back to the web."</figcaption>
+        <figcaption class="banner_label">Bring joy back to the web</figcaption>
     </figure>
+    <!-- main body container structure, articles, and content -->
     <main class="main_container">
+        <!-- top overview container and content -->
         <section class="content_containers" id="top_container">
             <section class="section_name">About</section>
-            <article class="section_article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </article>
+            <article class="section_article">
+                <p class="article_copy">I leverage relevant and contemporary fullstack development skills and tools...</p><br>
+                <p class="article_copy">Recently completed my sixth year operating in life sciences technology start ups...</p><br>
+                <p class="article_copy">Previously a product manager <a href="https://twitter.com/levelex" target="_blank"><span>@LevelEx</span></a></p><br>
+            </article>
         </section>
+        <!-- work container, tiles, and content -->
         <section class="content_containers" id="card_container">
-            <section class="section_name">Work</section>
-            <section class="tile_container">
-                <section class="hero_example"></section>
-                <section class="tile_example"></section>
-                <section class="tile_example"></section>
-                <section class="tile_example"></section>
-                <section class="tile_example"></section>
-            </section>
+            <!-- <section class="allcards_container"> -->
+            <a class="tile_link" href="https://mcjbyday.github.io/digizen/" target="_blank">
+                <section class="hero_example" id="etch">
+                    <p class="tile_label">Front-End Development</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://mcjbyday.github.io/01-refactor/" target="_blank">
+                <section class="tile_example" id="refactor">
+                    <p class="tile_label">Front-End Development</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://www.levelex.com/partnerships/pharma" target="_blank">
+                <section class="tile_example" id="cascades">
+                    <p class="tile_label">R&D, narrative design, editorial</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://www.youtube.com/watch?v=1eplp1s0tG0" target="_blank">
+                <section class="tile_example" id="cardio">
+                    <p class="tile_label">R&D, launch product and narrative design, editorial</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://patents.google.com/patent/WO2016179366A1/" target="_blank">
+                <section class="tile_example" id="micra">
+                    <p class="tile_label">Patent co-inventor, R&D</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://www.levelex.com/article/level-ex-r-expands-into-dermatology-with-launch-of-top-derm" target="_blank">
+                <section class="tile_example" id="top-derm">
+                    <p class="tile_label">R&D</p>
+                </section>
+            </a>
+            <a class="tile_link" href="https://www.levelex.com/blog/fighting-covid-19-with-video-game-technology" target="_blank">
+                <section class="tile_example" id="covid-19">
+                    <p class="tile_label">R&D, post-launch product design</p>
+                </section>
+            </a>
+            <!-- </section> -->
         </section>
+        <!-- contact and CTA container -->
         <section class="content_containers" id="CTA_container">
             <section class="section_name">Contact</section>
-            <article class="section_article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </article>
+            <article class="section_article">
+                <p class="article_copy">Get in touch, and let's build something together.</p><br>        
+                <p class="article_copy">Follow me on <a href="http://www.github.com/mcjbyday" target="_blank">Github</a></p><br>
+                <p class="article_copy">Connect with me on <a href="https://www.linkedin.com/in/michael-j-76050285/" target="_blank">LinkedIn</a></p><br>
+                <p class="article_copy">Follow me on <a href="https://twitter.com/mcjbyday/" target="_blank">Twitter</a></p><br>
+            </article>
         </section>
     </main>
-    <footer class="footer">Made with logic and arithmetic.</footer>
+    <!-- footer of page -->
+    <footer class="footer">Made with logic and arithmetic <a href="https://github.com/mcjbyday/digizen" target="_blank"><span class="githubicon"></span></a></footer>
 </body>
 </html>
