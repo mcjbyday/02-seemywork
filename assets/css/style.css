@@ -233,6 +233,10 @@ body {
     object-fit: contain;
 }
 
+#pwdgen {
+    background-image: URL(./images/figures/Capture-pwdgen.gif);
+}
+
 #refactor {
     background-image: URL(./images/figures/Screenshot-Horiseon-Social-Solution-Services-Home.png);
 }
