@@ -233,12 +233,12 @@ body {
     object-fit: contain;
 }
 
-#pwdgen {
-    background-image: URL(./images/figures/Capture-pwdgen.gif);
+#quizapp {
+    background-image: URL(./images/figures/Capture-quizapp.gif);
 }
 
-#refactor {
-    background-image: URL(./images/figures/Screenshot-Horiseon-Social-Solution-Services-Home.png);
+#pwdgen {
+    background-image: URL(./images/figures/Capture-pwdgen.gif);
 }
 
 #cascades {
