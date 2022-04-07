@@ -237,6 +237,10 @@ body {
     background-image: URL(./images/figures/Capture-quizapp.gif);
 }
 
+#dayplanner {
+    background-image: URL(./images/figures/Capture-dayplanner.gif)
+}
+
 #pwdgen {
     background-image: URL(./images/figures/Capture-pwdgen.gif);
 }
