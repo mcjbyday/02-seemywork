@@ -245,16 +245,16 @@ body {
     background-image: URL(./images/figures/Capture-pwdgen.gif);
 }
 
+#micra {
+    background-image: URL(./images/figures/Capture-micraimplantation.gif);   
+}
+
 #cascades {
     background-image: URL(./images/figures/Screenshot-cascades.png);
 }
 
 #cardio {
     background-image: URL(./images/figures/Screenshot-cardioex.gif);
-}
-
-#micra {
-    background-image: URL(./images/figures/Screenshot-productinsitu.jpg);   
 }
 
 #top-derm {
