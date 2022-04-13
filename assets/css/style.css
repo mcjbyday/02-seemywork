@@ -233,6 +233,11 @@ body {
     object-fit: contain;
 }
 
+#getweather {
+    background-image: URL(./images/figures/Capture-getweather.gif);
+
+}
+
 #quizapp {
     background-image: URL(./images/figures/Capture-quizapp.gif);
 }
