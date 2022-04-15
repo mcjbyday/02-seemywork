@@ -1,16 +1,39 @@
 getMet();
 
-// $('#img_hover').attr("src", "./assets/css/images/figures/164998400323332140.jpg");
-
 var faceOn = false;
 
+
 $('#avatar_img').hover( 
-    revealFace
-    , returnBlur
+    revealFace,
+    returnBlur,
 );
 
+$('#avatar_img').hover( 
+    revealTip,
+    hideTip
+);
+
+$('#avatar_img').on("tap", faceOnSwitch);
+
+$('#avatar_img').on("click", faceOnSwitch);
+
+
+function hideTip() {
+    $('.pointer_items_custom').css("visibility","hidden");
+    $('.pointer_items_custom_arrow').css("visibility","hidden");
+    // $('.pointer_items_custom').val("( Tap on me to keep me around... )");
+    // $('.pointer_items_custom_arrow').val("⤻")
+}
+
+function revealTip() {
+    $('.pointer_items_custom').css("visibility","visible");
+    $('.pointer_items_custom_arrow').css("visibility","visible");
+    // $('.pointer_items_custom').val("");
+    // $('.pointer_items_custom_arrow').val("")
+}
+
 function revealFace() {
-    $(this).attr({"style": "filter: none;opacity: 1","src":"./assets/css/images/figures/img_0694682396022516.png"})
+    $('#avatar_img').attr({"style": "filter: none;opacity: 1","src":"./assets/css/images/figures/img_0694682396022516.png"})
 }
 
 function returnBlur() {
@@ -28,9 +51,6 @@ function faceOnSwitch() {
     }
 }
 
-$('#avatar_img').on("click", faceOnSwitch);
-
-
 function getMet() {
 
     let metURL = "https://collectionapi.metmuseum.org/public/collection/v1/objects/469927"
@@ -47,26 +67,4 @@ function getMet() {
         $('#avatar_img').attr("src", metData.primaryImageSmall);
     })
 };
-            
-
-
-
-// $('#avatar_img').hover(function() {
-//     if (faceOn) {
-//         $(this).attr({"src":"./assets/css/images/figures/img_0694682396022516.png","style":"filter: none;opacity: 1"})
-//     }
-//     else {$(this).attr({"src":"./assets/css/images/figures/164998400323332140.jpg","style":"filter: blur(0.2rem);opacity: 85%;"})
-//     }
-//     // , function() {
-//     // if (faceOn) 
-//     // $(this).attr({"src":"./assets/css/images/figures/164998400323332140.jpg","style":"filter: blur(0.2rem);opacity: 85%;"})
-// });
-
-// $('#avatar_img').taphold(function() {
-//     $(this).attr({"src":"./assets/css/images/figures/img_0694682396022516.png","style":"filter: none;opacity: 1"})}
-    
-//     , function() {
-//         $(this).attr({"src":"./assets/css/images/figures/164998400323332140.jpg","style":"filter: blur(0.2rem);opacity: 85%;"})
-// });
-
-
+        

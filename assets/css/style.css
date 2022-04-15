@@ -132,6 +132,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
     
 }
 
@@ -201,16 +202,30 @@ body {
     /* ⤹ */
 }
 
-.pointer_items_left, .pointer_items_left_arrow, .pointer_items_right, .pointer_items_right_arrow {
+.pointer_items_custom, .pointer_items_custom_arrow, .pointer_items_left, .pointer_items_left_arrow, .pointer_items_right, .pointer_items_right_arrow {
     font-family: 'Grape Nuts', cursive;
     color: var(--textcolor1);
     text-shadow: var(--grayTone);
     position: absolute;
     z-index: 100;
 }
+
 .pointer_items_left, .pointer_items_left_arrow {
     transform: rotate(-10deg);
     font-size: 40px;
+}
+
+.pointer_items_custom {
+    left: 210px;
+    bottom: -30px;
+    font-size: 12px;
+}
+
+.pointer_items_custom_arrow {
+    left: 375px;
+    bottom: -30px;
+    transform: rotate(-45deg);
+    font-size: 30px;
 }
 
 .pointer_items_left {
@@ -410,6 +425,19 @@ a {
     }
 
 
+    .pointer_items_custom {
+        left: 200px;
+        bottom: -5px;
+        
+    }
+
+    .pointer_items_custom_arrow {
+        left: 360px;
+        bottom: -10px;
+        transform: rotate(-45deg);
+        font-size: 30px;
+    }
+
     .pointer_items_left {
         left: -80px;
         top: -25px;
@@ -450,6 +478,20 @@ a {
     .pointer_items_left, .pointer_items_left_arrow, .pointer_items_right, .pointer_items_right_arrow {
         font-size: 25px;
         /* display: none     */
+    }
+
+
+    .pointer_items_custom {
+        left: 15px;
+        bottom: -5px;
+        
+    }
+
+    .pointer_items_custom_arrow {
+        left: 185px;
+        bottom: -10px;
+        transform: rotate(-45deg);
+        font-size: 30px;
     }
 
     .pointer_items_left, .pointer_items_left_arrow {
