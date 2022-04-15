@@ -6,6 +6,8 @@
 ## Technologies
 - HTML5
 - CSS3
+- Javascript
+- Bootstrap
 
 ## Links
 See it live:<br> [See My Work](https://mcjbyday.github.io/02-seemywork/)
