@@ -2,6 +2,8 @@ getMet();
 
 var faceOn = false;
 
+$('.pointer_items_custom').css("visibility","hidden");
+$('.pointer_items_custom_arrow').css("visibility","hidden");
 
 $('#avatar_img').hover( 
     revealFace,
