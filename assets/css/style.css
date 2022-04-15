@@ -21,15 +21,6 @@
     --hero-h-mins: 60vw;  
   }
 
-  /* TO DO remove
-  :root {
-      --tile-w-mins: 240px;
-    --tile-h-mins: 240px;
-    --hero-w-mins: 480px;
-    --hero-h-mins: 480px;
-  } */
-
-
 /* set document fonts throughout */
 * {
     font-family: Proxima Nova,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -103,6 +94,22 @@ body {
     position: relative;
     z-index: 1;
 }
+
+#avatar_img {
+    border: 1px solid var(--darkest);
+    border-radius: 50%;
+    z-index: 100;
+    margin: 2%;
+    min-width: 125px;
+    filter: blur(0.3rem);
+    opacity: 70%;
+}
+
+#avatar_img:hover {
+    filter: none;
+    opacity: 1;
+} 
+
 
 .banner_label {
     position: absolute;
