@@ -365,10 +365,11 @@ body {
     height: 1em;
     content: URL("./icons/GitHub-Mark-64px.png");
     object-fit: contain;
-    border-radius: 15px;
+    filter: invert(1);
+    /* border-radius: 15px; */
     /* border: 1px solid --textcolor1; */
     /* color: white; */
-    background-color: rgb(255, 255, 255, 0.8);
+    /* background-color: rgb(255, 255, 255, 0.8); */
 }
 
 .githubicon:hover, .githubicon:active {
