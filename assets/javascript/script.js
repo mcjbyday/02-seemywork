@@ -35,7 +35,7 @@ function revealTip() {
 }
 
 function revealFace() {
-    $('#avatar_img').attr({"style": "filter: none;opacity: 1","src":"./assets/css/images/figures/img_0694682396022516.png"})
+    $('#avatar_img').attr({"style": "filter: none;opacity: 1","src":"./assets/css/images/figures/img_0694682396022516.png","class":"col-1"})
 }
 
 function returnBlur() {

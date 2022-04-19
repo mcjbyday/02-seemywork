@@ -162,6 +162,7 @@ body {
     justify-content: flex-end;
     width: 60%;
     padding: 3% 10%;
+    max-height: 150px;
 }
 
 .section_article, .article_copy {
