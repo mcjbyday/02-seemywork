@@ -285,18 +285,25 @@ body {
 }
 
 /* individual portfolio images used to link to work examples */
-#etch {
-    background-image: URL(./images/figures/etch.gif);
+#codechorus {
+    background-image: URL(./images/figures/Capture-codechorus.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: contain;
 }
 
+#etch {
+    background-image: URL(./images/figures/etch.gif);
+
+}
+
+
 #getweather {
     background-image: URL(./images/figures/Capture-getweather.gif);
 
 }
+
 
 #quizapp {
     background-image: URL(./images/figures/Capture-quizapp.gif);
