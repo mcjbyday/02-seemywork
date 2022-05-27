@@ -1,7 +1,7 @@
-# 02-seemywork repository
+# portfolio sandbox
 
 ## Description
-<p>This repository contains the current working directory for my body of current and past work.
+<p>This repository contains the current sandbox directory for conducting experiments on the display of my body of current and past work.
 
 ## Technologies
 - HTML5
@@ -10,7 +10,7 @@
 - Bootstrap
 
 ## Links
-See it live:<br> [See My Work](https://mcjbyday.github.io/02-seemywork/)
+See it live:<br> [See My Work](https://mcjbyday.github.io/seemywork/)
 
     
 ## Screenshots
